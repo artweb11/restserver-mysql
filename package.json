@@ -4,7 +4,8 @@
   "private": false,
   "scripts": {
     "start": "node ./bin/www",
-    "provision": "mysql -u root -p -h localhost rest_server_test < database/rest_server_test.sql"
+    "provision": "mysql -u root -p -h localhost < database/rest_server_test.sql",
+    "unprovision": "mysql -u root -p -h localhost -e \"DROP DATABASE rest_server_test;\""
   },
   "dependencies": {
     "body-parser": "~1.13.2",
